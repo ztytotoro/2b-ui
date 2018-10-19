@@ -1,11 +1,17 @@
 import { Layout, LayoutItem } from "./components/layout/main";
+import Row from "./components/Row.vue";
+import Card from "./components/Card.vue";
 
 export {
     Layout,
-    LayoutItem
+    LayoutItem,
+    Card,
+    Row
 };
 
 export const components = [
     Layout,
-    LayoutItem
+    LayoutItem,
+    Card,
+    Row
 ];
