@@ -11,20 +11,17 @@ import { Component, Vue, Inject, Prop } from "vue-class-decorator";
 export default class LayoutItem extends Vue {
     @Prop({type: Number})
     private span!: number;
-    @Inject("totalLength")
-    private totalLength!: number;
-
-    @Inject("AddLength")
-    private AddLength!: (length: number) => void;
+    @Inject("layout")
+    private parent!: any;
 
     private mounted() {
-        this.AddLength(this.span);
+        this.parent.totalLength += this.span;
     }
 
     private get style() {
         return {
             height: "100%",
-            width: this.span / this.totalLength * 100 + "%"
+            width: this.span / this.parent.totalLength * 100 + "%"
         }
     }
 }
