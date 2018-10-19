@@ -9,17 +9,8 @@ import { Component, Vue, Provide } from "vue-class-decorator";
     name: "2b-layout"
 })
 export default class Layout extends Vue {
-    @Provide("children")
-    private children: number[] = [];
-
     @Provide("totalLength")
-    public get totalLength() {
-        let length = 0;
-        for (const item of this.children) {
-            length += item;
-        }
-        return length;
-    }
+    private totalLength: number = 0;
 }
 </script>
 
