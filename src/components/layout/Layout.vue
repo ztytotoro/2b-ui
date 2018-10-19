@@ -11,6 +11,11 @@ import { Component, Vue, Provide } from "vue-class-decorator";
 export default class Layout extends Vue {
     @Provide("totalLength")
     private totalLength: number = 0;
+
+    @Provide("AddLength")
+    private AddLength(length: number) {
+        this.totalLength += length;
+    }
 }
 </script>
 

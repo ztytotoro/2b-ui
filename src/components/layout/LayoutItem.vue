@@ -14,8 +14,11 @@ export default class LayoutItem extends Vue {
     @Inject("totalLength")
     private totalLength!: number;
 
+    @Inject("AddLength")
+    private AddLength!: (length: number) => void;
+
     private mounted() {
-        this.totalLength += this.span;
+        this.AddLength(this.span);
     }
 
     private get style() {
