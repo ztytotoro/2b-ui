@@ -6,7 +6,7 @@
 import { Component, Vue, Provide } from "vue-class-decorator";
 
 @Component({
-    name: "2b-layout"
+    name: "tb-layout"
 })
 export default class Layout extends Vue {
     @Provide("totalLength")

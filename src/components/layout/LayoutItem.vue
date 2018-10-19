@@ -6,7 +6,7 @@
 import { Component, Vue, Inject, Prop } from "vue-class-decorator";
 
 @Component({
-    name: "2b-layout-item"
+    name: "tb-layout-item"
 })
 export default class LayoutItem extends Vue {
     @Prop({type: Number})
