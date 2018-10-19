@@ -1,4 +1,4 @@
-import { Layout, LayoutItem } from "@/components/layout/main";
+import { Layout, LayoutItem } from "./components/layout/main";
 
 export {
     Layout,
