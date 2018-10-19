@@ -22,7 +22,7 @@ export default class Row extends Vue {
   }
 
   private get style() {
-    let t: any = {};
+    const t: any = {};
     if (this.align === "aside") {
       t.justifyContent = "space-between";
     } else if (this.align === "space-around") {
