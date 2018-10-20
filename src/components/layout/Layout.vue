@@ -12,9 +12,7 @@ export default class Layout extends Vue {
     private totalLength: number = 0;
 
     @Provide("layout")
-    private get _this() {
-        return this;
-    }
+    private _this:any = this;
 }
 </script>
 

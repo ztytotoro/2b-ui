@@ -1,8 +1,93 @@
+<template>
+    <button :class="['hy-btn','hy-btn-' + type]" @click="Click" :disabled="_disabled">
+        <slot></slot>
+    </button>
+</template>
+
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-class-decorator";
 
 @Component
 export default class Button extends Vue {
-
+    @Prop({type: String, default: "default"}) private type!: string;
 }
 </script>
+
+<style lang="less" scoped>
+.hy-btn {
+    width: 92px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0;
+    font-weight: normal;
+    outline: none;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    touch-action: manipulation;
+    white-space: nowrap;
+    border-radius: 4px;
+}
+
+.hy-btn+.hy-btn {
+    margin-left: 10px;
+}
+
+.hy-btn-default {
+    border: 1px solid #bfbfbf;
+    background-color: #fff;
+}
+
+.hy-btn-default:hover {
+    border-color: #4d99e0;
+    color: #4d99e0;
+}
+
+.hy-btn-default:active {
+    background-color: #1c699f;
+    color: #fff;
+}
+
+.hy-btn-primary {
+    background-color: #4d99e0;
+    border: 1px solid #4d99e0;
+    color: #fff
+}
+
+.hy-btn-primary:hover {
+    background-color: #217ebd;
+    color: #fff;
+}
+
+.hy-btn-primary:active {
+    background-color: #1c699f;
+    color: #fff;
+}
+
+.hy-btn-text {
+    border-color: transparent;
+    color: #409eff;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    width: unset;
+}
+
+.hy-btn-text:focus {
+    color: #66b1ff;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.hy-btn:disabled {
+    color: #737477;
+    border: 1px solid #bfbfbf;
+    background-color: #e6e6e6;
+    cursor: default;
+}
+
+.hy-btn-text:disabled{
+    background: transparent;
+    border: none;
+}
+</style>
