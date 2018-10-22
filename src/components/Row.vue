@@ -1,42 +1,42 @@
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-class-decorator";
+import { FunctionalVue, Component, Prop } from "vue-class-decorator";
 
 @Component({
   name: "tb-row"
 })
-export default class Row extends Vue {
+export default class Row extends FunctionalVue {
   @Prop(String)
   private align!: string;
   @Prop({ type: String, default: "8px" })
   private padding!: string;
 
-  private render(h: any) {
+  private render(h: any, context: any) {
     return h(
       "div",
       {
         class: ["tb-row"],
-        style: this.style
+        style: GetStyle(context.props)
       },
       this.$slots.default
     );
   }
+}
 
-  private get style() {
-    const t: any = {};
-    if (this.align === "aside") {
-      t.justifyContent = "space-between";
-    } else if (this.align === "space-around") {
-      t.justifyContent = "space-around";
-    } else if (this.align === "center") {
-      t.justifyContent = "center";
-    } else if (this.align) {
-      t.justifyContent = this.align;
-    }
-    if (this.padding) {
-      t.padding = this.padding;
-    }
-    return t;
-  }
+function GetStyle(props: any) {
+  const t: any = {};
+  if (props.align === "aside") {
+        t.justifyContent = "space-between";
+      } else if (props.align === "space-around") {
+        t.justifyContent = "space-around";
+      } else if (props.align === "center") {
+        t.justifyContent = "center";
+      } else if (props.align) {
+        t.justifyContent = props.align;
+      }
+  if (props.padding) {
+        t.padding = props.padding;
+      }
+  return t;
 }
 </script>
 

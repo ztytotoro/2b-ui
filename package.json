@@ -1,6 +1,6 @@
 {
   "name": "2b-ui",
-  "version": "0.0.11",
+  "version": "0.0.14",
   "main": "dist/2b-ui.umd.js",
   "typings": "dist/src/main.d.ts",
   "scripts": {
@@ -11,7 +11,7 @@
   "dependencies": {
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
-    "vue-class-decorator": "^7.4.2"
+    "vue-class-decorator": "^7.4.8"
   },
   "devDependencies": {
     "@storybook/vue": "^3.4.11",

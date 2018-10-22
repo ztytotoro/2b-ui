@@ -1,5 +1,5 @@
-<template>
-    <button :class="['tb-btn','tb-btn-' + type]" @click="Click" :disabled="_disabled">
+<template functional>
+    <button :class="['tb-btn','tb-btn-' + props.type]" @click="$emit('click')" :disabled="props.disabled">
         <slot></slot>
     </button>
 </template>
@@ -10,6 +10,7 @@ import { Vue, Component, Prop } from "vue-class-decorator";
 @Component
 export default class Button extends Vue {
     @Prop({type: String, default: "default"}) private type!: string;
+    @Prop(Boolean) private disabled!: boolean;
 }
 </script>
 

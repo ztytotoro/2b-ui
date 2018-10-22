@@ -1,20 +1,17 @@
-<template>
+<template functional>
     <div class="tb-card">
-        <div class="tb-card-title" v-if="title"><span class="tb-card-title-text">{{title}}</span></div>
-        <div class="tb-card-container"></div>
-        <slot></slot>
+        <div class="tb-card-title" v-if="props.title"><span class="tb-card-title-text">{{props.title}}</span></div>
+        <div class="tb-card-container">
+            <slot></slot>
+        </div>
     </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-class-decorator";
-import Row from "./Row.vue";
 
 @Component({
-    name: "tb-card",
-    components: {
-        Row
-    }
+    name: "tb-card"
 })
 export default class Card extends Vue {
     @Prop(String) private title!: string;
