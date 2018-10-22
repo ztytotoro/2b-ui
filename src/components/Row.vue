@@ -17,7 +17,7 @@ export default class Row extends FunctionalVue {
         class: ["tb-row"],
         style: GetStyle(context.props)
       },
-      this.$slots.default
+      context.slots().default
     );
   }
 }
