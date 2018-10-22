@@ -1,5 +1,5 @@
 <template>
-    <div class="hy-layout"><slot></slot></div>
+    <div class="tb-layout"><slot></slot></div>
 </template>
 
 <script lang="ts">
@@ -12,13 +12,13 @@ export default class Layout extends Vue {
     private totalLength: number = 0;
 
     @Provide("layout")
-    private _this:any = this;
+    private THIS: any = this;
 }
 </script>
 
 
 <style lang="less" scoped>
-.hy-layout {
+.tb-layout {
     display: flex;
     justify-content: center;
     align-items: flex-start;

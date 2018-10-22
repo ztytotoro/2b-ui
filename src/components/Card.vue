@@ -1,6 +1,7 @@
 <template>
-    <div class="hy-card">
-        <Row padding="0" class="hy-card-title" v-if="title"><span class="hy-card-title-text">{{title}}</span></Row>
+    <div class="tb-card">
+        <div class="tb-card-title" v-if="title"><span class="tb-card-title-text">{{title}}</span></div>
+        <div class="tb-card-container"></div>
         <slot></slot>
     </div>
 </template>
@@ -21,20 +22,34 @@ export default class Card extends Vue {
 </script>
 
 <style lang="less" scoped>
-.hy-card {
+.tb-card {
     background: #fff;
     border-radius: 5px;
     margin-top: 2px;
     min-height: 80px;
-    padding: 12px;
     box-shadow: 1px 1px 1px 1px #d0d3da;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #d0d3da;
 
     &+& {
         margin-top: 20px;
     }
 
     &-title {
-        margin-bottom: 8px;
+        height: 40px;
+        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        background-color: #f3f3f3;
+        border-bottom: 1px solid #e4e6e7;
+    }
+    &-container {
+        flex: 1;
+        display: block;
+        padding: 12px;
     }
 }
 </style>

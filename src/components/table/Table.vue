@@ -1,16 +1,16 @@
 <template>
-    <div class="hy-table">
+    <div class="tb-table">
         <div hidden>
             <slot></slot>
         </div>
-        <div :class="['hy-table-container', border ? 'hy-table-container--bordered' : 'hy-table-container--shadowed']">
-            <div class="hy-table-title" v-if="title">{{title}}</div>
-            <hy-table-head :heads="heads" :style="{width: width ? width : '100%'}"></hy-table-head>
-            <hy-table-body :style="{width: width ? width : '100%', height: height ? height : ''}" :class="[height && !body.hasScrollBar ? 'hy-table-body--fixed-height' : '']">
-            </hy-table-body>
+        <div :class="['tb-table-container', border ? 'tb-table-container--bordered' : 'tb-table-container--shadowed']">
+            <div class="tb-table-title" v-if="title">{{title}}</div>
+            <tb-table-head :heads="heads" :style="{width: width ? width : '100%'}"></tb-table-head>
+            <tb-table-body :style="{width: width ? width : '100%', height: height ? height : ''}" :class="[height && !body.hasScrollBar ? 'tb-table-body--fixed-height' : '']">
+            </tb-table-body>
         </div>
-        <hy-row align="flex-start" padding="0">
+        <tb-row align="flex-start" padding="0">
             <slot name="pagination"></slot>
-        </hy-row>
+        </tb-row>
     </div>
 </template>

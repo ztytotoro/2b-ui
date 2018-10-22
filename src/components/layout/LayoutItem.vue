@@ -1,5 +1,5 @@
 <template>
-    <div class="hy-layout-item" :style="style"><slot></slot></div>
+    <div class="tb-layout-item" :style="style"><slot></slot></div>
 </template>
 
 <script lang="ts">
@@ -29,7 +29,7 @@ export default class LayoutItem extends Vue {
 
 
 <style lang="less" scoped>
-.hy-layout-item {
+.tb-layout-item {
     padding: 0px;
     &+& {
         margin-left: 20px;

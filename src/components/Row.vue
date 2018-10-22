@@ -14,7 +14,7 @@ export default class Row extends Vue {
     return h(
       "div",
       {
-        class: ["hy-row"],
+        class: ["tb-row"],
         style: this.style
       },
       this.$slots.default
@@ -41,7 +41,7 @@ export default class Row extends Vue {
 </script>
 
 <style lang="less" scoped>
-.hy-row {
+.tb-row {
     padding: 8px;
     display: flex;
     flex-direction: row;
