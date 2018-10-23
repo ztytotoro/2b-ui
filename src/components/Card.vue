@@ -1,5 +1,5 @@
 <template functional>
-    <div class="tb-card">
+    <div class="tb-card" :style="[data.style, data.staticStyle]" :class="[data.class, data.staticClass]">
         <div class="tb-card-title" v-if="props.title"><span class="tb-card-title-text">{{props.title}}</span></div>
         <div class="tb-card-container">
             <slot></slot>

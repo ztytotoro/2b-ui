@@ -1,5 +1,5 @@
 <template functional>
-    <button :class="['tb-btn','tb-btn-' + props.type]" v-on="listeners" :disabled="props.disabled">
+    <button :class="['tb-btn','tb-btn-' + props.type, data.class, data.staticClass]" v-on="listeners" :disabled="props.disabled" :style="[data.style, data.staticStyle]">
         <slot></slot>
     </button>
 </template>

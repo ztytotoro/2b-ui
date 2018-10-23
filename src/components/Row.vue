@@ -14,8 +14,8 @@ export default class Row extends FunctionalVue {
     return h(
       "div",
       {
-        class: ["tb-row"],
-        style: GetStyle(context.props)
+        class: ["tb-row", context.data.class, context.data.staticClass],
+        style: [GetStyle(context.props), context.data.style, context.data.staticStyle]
       },
       context.slots().default
     );
