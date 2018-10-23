@@ -1,5 +1,5 @@
 <template functional>
-    <button :class="['tb-btn','tb-btn-' + props.type]" @click="$emit('click')" :disabled="props.disabled">
+    <button :class="['tb-btn','tb-btn-' + props.type]" v-on="listeners" :disabled="props.disabled">
         <slot></slot>
     </button>
 </template>
