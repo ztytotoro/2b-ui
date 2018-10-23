@@ -24,11 +24,11 @@ export default class Card extends Vue {
     border-radius: 5px;
     margin-top: 2px;
     min-height: 80px;
-    box-shadow: 1px 1px 1px 1px #d0d3da;
+    box-shadow: 1px 1px 4px 1px #d0d3daba;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border: 1px solid #d0d3da;
+    border: 1px solid #dcdfe6;
 
     &+& {
         margin-top: 20px;
