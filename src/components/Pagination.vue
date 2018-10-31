@@ -40,6 +40,7 @@ export default class Pagination extends Vue {
 
   public Jump() {
       this.frezze = false;
+      this.jumpPage = this.jumpPage > this.total ? this.total : this.jumpPage < 1 ? 1 : this.jumpPage
       this.currentPage = this.jumpPage;
   }
 
