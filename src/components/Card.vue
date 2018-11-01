@@ -45,7 +45,8 @@ export default class Card extends Vue {
     }
     &-container {
         flex: 1;
-        display: block;
+        display: flex;
+        flex-direction: column;
         padding: 12px;
     }
 }
