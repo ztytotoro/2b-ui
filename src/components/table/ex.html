@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .shell {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border: 1px solid black;
+            position: relative;
+            height: 600px;
+        }
+
+        .cell {
+            height: 40px;
+            flex: 1;
+        }
+
+        .cell+.cell {
+            border-left: 1px solid black;
+        }
+
+        .head {
+            display: flex;
+            border-bottom: 1px solid black;
+            position: absolute;
+            width: 100%;
+        }
+
+        .head-item {
+            height: 35px;
+        }
+
+        .body-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 35px;
+            flex: 1;
+            width: 100%;
+            overflow-y: auto;
+        }
+
+        .body {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin-bottom: -1px;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .row+.row {
+            border-top: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="head">
+            <div class="cell head-item"></div>
+            <div class="cell head-item"></div>
+            <div class="cell head-item"></div>
+            <div class="cell head-item"></div>
+            <div class="cell head-item"></div>
+            <div class="cell head-item"></div>
+        </div>
+        <div class="body-container">
+            <div class="body">
+                <div class="row">
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                </div>
+                <div class="row">
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                </div>
+                <div class="row">
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                </div>
+                <div class="row">
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                </div>
+                <div class="row">
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                </div>
+                <div class="row">
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                </div>
+                <div class="row">
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                </div>
+                <div class="row">
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                    <div class="cell body-item"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
