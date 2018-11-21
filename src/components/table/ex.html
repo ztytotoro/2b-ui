@@ -13,7 +13,6 @@
             width: 100%;
             border: 1px solid black;
             position: relative;
-            height: 600px;
         }
 
         .cell {
@@ -46,7 +45,6 @@
         }
 
         .body {
-            display: flex;
             flex-direction: column;
             border-top: 1px solid black;
             border-bottom: 1px solid black;
@@ -64,7 +62,8 @@
 </head>
 
 <body>
-    <div class="shell">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <div class="shell" id="table">
         <div class="head">
             <div class="cell head-item"></div>
             <div class="cell head-item"></div>
@@ -72,8 +71,9 @@
             <div class="cell head-item"></div>
             <div class="cell head-item"></div>
             <div class="cell head-item"></div>
+            <div :style="{ 'width': scrollWidth }"></div>
         </div>
-        <div class="body-container">
+        <div class="body-container" :style="{height: height}">
             <div class="body">
                 <div class="row">
                     <div class="cell body-item"></div>
@@ -143,5 +143,49 @@
         </div>
     </div>
 </body>
+<script>
+    const table = new Vue({
+        el: "#table",
+        data() {
+            return {
+                hasScroll: false,
+                height: "200px"
+            }
+        },
+        mounted() {
+            this.hasScroll = this.IfHasScroll();
+        },
+        watch: {
+            height() {
+                this.$nextTick(() => this.hasScroll = this.IfHasScroll());
+            }
+        },
+        computed: {
+            scrollWidth() {
+                return this.hasScroll ? getScrollbarWidth()+"px" : "0px"
+            }
+        },
+        methods: {
+            IfHasScroll() {
+                return this.$el.getElementsByClassName("body")[0].offsetHeight > this.$el.getElementsByClassName("body-container")[0].offsetHeight + 1
+            }
+        }
+    });
+
+    function getScrollbarWidth() {
+        var oP = document.createElement('p'),
+            styles = {
+                width: '100px',
+                height: '100px',
+                overflowY: 'scroll'
+            },
+            i, scrollbarWidth;
+        for (i in styles) oP.style[i] = styles[i];
+        document.body.appendChild(oP);
+        scrollbarWidth = oP.offsetWidth - oP.clientWidth;
+        oP.remove();
+        return scrollbarWidth;
+    }
+</script>
 
 </html>
