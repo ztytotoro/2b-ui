@@ -45,7 +45,6 @@
         }
 
         .body {
-            flex-direction: column;
             border-top: 1px solid black;
             border-bottom: 1px solid black;
             margin-bottom: -1px;
@@ -64,80 +63,72 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <div class="shell" id="table">
-        <div class="head">
-            <div class="cell head-item"></div>
-            <div class="cell head-item"></div>
-            <div class="cell head-item"></div>
-            <div class="cell head-item"></div>
-            <div class="cell head-item"></div>
-            <div class="cell head-item"></div>
+        <div class="head" :style="{width: rowWidth}">
+            <div class="cell head-item" :style="{width: columnWidth[0]}"></div>
+            <div class="cell head-item" :style="{width: columnWidth[1]}"></div>
+            <div class="cell head-item" :style="{width: columnWidth[2]}"></div>
+            <div class="cell head-item" :style="{width: columnWidth[3]}"></div>
+            <div class="cell head-item" :style="{width: columnWidth[4]}"></div>
+            <div class="cell head-item" :style="{width: columnWidth[5]}"></div>
             <div :style="{ 'width': scrollWidth }"></div>
         </div>
         <div class="body-container" :style="{height: height}">
             <div class="body">
-                <div class="row">
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
+                <div class="row" :style="{width: rowWidth}">
+                    <div class="cell body-item" :style="{width: columnWidth[0]}">sjasifjaofjaoijsdiajasdadadadsfaoi</div>
+                    <div class="cell body-item" :style="{width: columnWidth[1]}">sjasifjaofjaoijsdiajasdadadadsfaoi</div>
+                    <div class="cell body-item" :style="{width: columnWidth[2]}">sjasifjaofjaoijsdiajasdadadadsfaoisjasifjaofjaoijsdiajasdadadadsfaoi</div>
+                    <div class="cell body-item" :style="{width: columnWidth[3]}">sjasifjaofjaoijsdiajasdadadadsfaoi</div>
+                    <div class="cell body-item" :style="{width: columnWidth[4]}">sjasifjaofjaoijsdiajasdadadadsfaoi</div>
+                    <div class="cell body-item" :style="{width: columnWidth[5]}">sjasifjaofjaoijsdiajasdadadadsfaoi</div>
                 </div>
-                <div class="row">
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
+                <div class="row" :style="{width: rowWidth}">
+                    <div class="cell body-item" :style="{width: columnWidth[0]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[1]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[2]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[3]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[4]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[5]}"></div>
                 </div>
-                <div class="row">
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
+                <div class="row" :style="{width: rowWidth}">
+                    <div class="cell body-item" :style="{width: columnWidth[0]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[1]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[2]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[3]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[4]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[5]}"></div>
                 </div>
-                <div class="row">
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
+                <div class="row" :style="{width: rowWidth}">
+                    <div class="cell body-item" :style="{width: columnWidth[0]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[1]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[2]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[3]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[4]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[5]}"></div>
                 </div>
-                <div class="row">
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
+                <div class="row" :style="{width: rowWidth}">
+                    <div class="cell body-item" :style="{width: columnWidth[0]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[1]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[2]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[3]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[4]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[5]}"></div>
                 </div>
-                <div class="row">
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
+                <div class="row" :style="{width: rowWidth}">
+                    <div class="cell body-item" :style="{width: columnWidth[0]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[1]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[2]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[3]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[4]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[5]}"></div>
                 </div>
-                <div class="row">
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                </div>
-                <div class="row">
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
-                    <div class="cell body-item"></div>
+                <div class="row" :style="{width: rowWidth}">
+                    <div class="cell body-item" :style="{width: columnWidth[0]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[1]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[2]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[3]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[4]}"></div>
+                    <div class="cell body-item" :style="{width: columnWidth[5]}"></div>
                 </div>
             </div>
         </div>
@@ -149,11 +140,13 @@
         data() {
             return {
                 hasScroll: false,
-                height: "200px"
+                height: "100%",
+                columnWidths: []
             }
         },
         mounted() {
             this.hasScroll = this.IfHasScroll();
+            this.columnWidths = this.CalcColumnWidth();
         },
         watch: {
             height() {
@@ -163,11 +156,30 @@
         computed: {
             scrollWidth() {
                 return this.hasScroll ? getScrollbarWidth()+"px" : "0px"
+            },
+            rowWidth() {
+                let t = 0;
+                for(let it of this.columnWidths) t += it;
+                return t === 0 ? "" : t + "px";
+            },
+            columnWidth() {
+                return this.columnWidths.map(x => x + "px")
             }
         },
         methods: {
             IfHasScroll() {
                 return this.$el.getElementsByClassName("body")[0].offsetHeight > this.$el.getElementsByClassName("body-container")[0].offsetHeight + 1
+            },
+            CalcColumnWidth() {
+                let head = Array.from(this.$el.getElementsByClassName("head")[0].getElementsByClassName("cell")).map(x => x.offsetWidth);
+                let rows = this.$el.getElementsByClassName("row");
+                for(let row of rows) {
+                    let children = row.children;
+                    for(let i = 0; i < children.length; i++) {
+                        head[i] = Math.max(head[i], children[i].offsetWidth);
+                    }
+                }
+                return head;
             }
         }
     });
