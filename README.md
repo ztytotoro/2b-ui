@@ -1,4 +1,4 @@
-# hy-ui
+# 2b-ui
 
 ## Project setup
 ```
